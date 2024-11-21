@@ -3,6 +3,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
+    font-size: larger;
 }
 header {
     background: #050505;
@@ -51,10 +52,10 @@ header .menu a:hover {
 
 section {
     /* padding-top: 10rem; */
-    padding-top: 30px;
-    padding-bottom:80px;
-    padding-left:1px;
-    padding-right:1px;
+    padding-top: 0px;
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
 }
 
 .home {
@@ -64,7 +65,7 @@ section {
 }
 
 .home .content {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +95,9 @@ section {
     text-align: justify;
     text-transform: lowercase;
    font-style: italic;
+
 }
+ 
 
 .home .content .content-right a {
     font-size: 2rem;
@@ -128,36 +131,61 @@ section {
 
 }
 
-
 .about .content .content-right {
     text-transform: uppercase;
     text-align: center;
     color: rgb(255, 145, 0);
     padding-right: 100px;
     width: 40%;
+    margin-top: 100px;
 }
 
 .about .content .content-right p {
     text-align: justify;
-    color: #050505;
+    color: #fdfdfd;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+   font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content{
     width: 100%;
     display: flex;
+    background: linear-gradient(rgb(143, 97, 46),rgba(212, 160, 82, 0.986));
+    padding-bottom: 100px;
 }
 
 .about .content .content-left {
     width: 60%;
+    margin-top: 100px;
 }
 
-.about .content .content-left img{
+.about .content .content-left img {
     width: 500px;
-    border-radius: 59% 41% 69% 31% / 52% 50% 50% 48% ;
-    padding-left: 100px;
+    padding-left: 150px;
+}
+    
+.review .content .content-left h2 {
+    text-align: center;
+    margin-left: 50px;
+    font-size: 150%;
+    padding-right: 100px;
+    padding-left: 50px;
+    width: 80%;
+    margin-top: 100px;
 }
 
+.review .content .content-left p {
+    text-align: center;
+    font-size: 120%;
+    margin-left: 50px;
+}
 
+.review .content .content-left ul{
+    margin-left: 60px;
+    font-size: 110%;
+}
 
 
 /*section about end*/
