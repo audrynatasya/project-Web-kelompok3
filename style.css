@@ -1,10 +1,11 @@
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
     font-size: larger;
 }
+
 header {
     background: #050505;
     padding: 1rem;
@@ -16,6 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     display: flex;
+    z-index: 1;
 }
 
 header .logo {
@@ -30,7 +32,7 @@ header .logo {
 header .logo img {
     width: 3rem;
     height: 3rem;
-    margin-bottom: -10px;  
+    margin-bottom: -10px;
     padding-right: 20px;
 }
 
@@ -53,32 +55,37 @@ header .menu a:hover {
 section {
     /* padding-top: 10rem; */
     padding-top: 0px;
-    padding-bottom:0px;
-    padding-left:0px;
-    padding-right:0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .home {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
 }
+
 
 .home .content {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('images/delicious\ food.jpeg');
+    position: relative;
     background-repeat: no-repeat;
-    background-size: cover; 
-    padding: 290px;
+    background-size: cover;
+    background-image: url(images/IMG-20241126-WA0000[1]fotobaru1.jpg);
+    height: 100vh; /* Pastikan tinggi kontainer cukup besar */
+    padding: 80px; /* Hapus padding untuk mencegah gangguan */
 }
 
 .home .content .content-left {
     width: 100%;
     margin-right: 15px;
 }
+
 .home .content .content-right {
     width: 70%;
     margin-left: 15px;
@@ -94,10 +101,30 @@ section {
     font-size: 1.5rem;
     text-align: justify;
     text-transform: lowercase;
-   font-style: italic;
+    font-style: italic;
 
 }
- 
+
+.button-wrapper {
+    position: absolute;
+    top: 78%; /* Posisikan di tengah vertikal */
+    left: 50%; /* Posisikan di tengah horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan secara sempurna */
+}
+.button-wrapper a button {
+    height: 50px;
+    width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.007);
+    border-radius: 5px;
+    color: #000000;
+    background: #ffffffb7;
+    cursor: pointer;
+    transition: 500ms;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
 
 .home .content .content-right a {
     font-size: 2rem;
@@ -112,7 +139,7 @@ section {
 
 .home .content .content-right a button {
     height: 30px;
-    width: 100%;
+    /* width: 100%; */
     border: 2px solid rgba(255, 255, 255, 0.007);
     border-radius: 5px;
     color: #fff;
@@ -125,8 +152,8 @@ section {
     text-transform: uppercase;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 250px;
-    display: block;
+    margin-top: 350px;
+    /* display: block; */
     text-decoration: none;
 
 }
@@ -143,16 +170,16 @@ section {
 .about .content .content-right p {
     text-align: justify;
     color: #fdfdfd;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-transform: lowercase;
-   font-style: italic;
+    font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.content{
+.content {
     width: 100%;
     display: flex;
-    background: linear-gradient(rgb(143, 97, 46),rgba(212, 160, 82, 0.986));
+    background: linear-gradient(rgb(143, 97, 46), rgba(212, 160, 82, 0.986));
     padding-bottom: 100px;
 }
 
@@ -165,7 +192,20 @@ section {
     width: 500px;
     padding-left: 150px;
 }
-    
+.review .content {
+    width: 100%;
+    display: flex;
+}
+.review .content .content-left {
+    width: 50%;
+}
+.review .content .content-right{
+    width: 50%;
+}
+.review .content .content-right img{
+    width: 500px;
+    padding-top: 50px;
+}
 .review .content .content-left h2 {
     text-align: center;
     margin-left: 50px;
@@ -173,57 +213,75 @@ section {
     padding-right: 100px;
     padding-left: 50px;
     width: 80%;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
 
 .review .content .content-left p {
     text-align: center;
-    font-size: 120%;
+    font-size: 125%;
     margin-left: 50px;
+    margin-top: -70px;
 }
 
-.review .content .content-left ul{
+.review .content .content-left ul {
     margin-left: 60px;
-    font-size: 110%;
+    font-size: 115%;
 }
 
 
 /*section about end*/
 
-.footer{
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-    background-color: #fff;
-    padding: 2rem 0;
-}
-.footer.box-container{
-    display: flex;
-    grid-template-columns: repeat(auto-fit,minxmax(22rem,1fr));
-    gap: 2rem;
+.footer {
     width: 100%;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(rgb(143, 97, 46), rgba(230, 177, 99, 0.986)); 
+    padding-top: 40px;
+    padding-left: 50px;
+    
 }
-.footer .box{
-    text-align: justify;
 
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar elemen turun ke baris berikutnya jika ruang tidak cukup */
+    gap: 2rem; /* Jarak antar box */
+    justify-content: space-between; /* Membagi ruang antar elemen secara merata */
 }
-.footer.box-container h3{
+
+.footer .box {
+    flex: 1 1 calc(33.33% - 2rem); /* Membagi lebar box menjadi 3 kolom */
+    max-width: calc(33.33% - 2rem); /* Membatasi lebar maksimal agar tetap 3 kolom */
+    text-align: justify;
+}
+
+
+.footer.box-container .box h3 {
     font-size: 2.5rem;
     color: rgb(0, 0, 0);
-    padding: .8rem 0; 
+    padding: .8rem 0;
     border-bottom: .2rem solid rgb(0, 0, 0);
 
 }
-.footer.box-container .box a{
-    display: flex;
-    align-items: center ;
-    font-size: 1.5rem;
-    color: aqua;
-    padding: 1rem 0;
-    text-transform: none;
-    text-decoration: none;
-    
+
+.footer .box-container .box ul li a{
+    color: #000000;
+}
+.footer .box-container .box a:hover{
+    padding-left: 10px;
+    transition: 0.4s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .footer .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di layar sedang */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .box-container {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom di layar kecil */
+    }
 }
